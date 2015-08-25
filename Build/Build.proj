@@ -7,7 +7,7 @@
 		<ApplicationName>BizTalkComponents.PipelineComponents.SetPropertyFromXPath</ApplicationName>
 	</PropertyGroup>
 	<ItemGroup>
-		<Resource Include="..\Src\SetProperty\bin\Debug\BizTalkComponents.PipelineComponents.SetPropertyFromXPath.dll" />
+		<Resource Include="..\Src\SetPropertyFromXPath\bin\Debug\BizTalkComponents.PipelineComponents.SetPropertyFromXPath.dll" />
 	</ItemGroup>
 
   <Target Name="GetVersion">
