@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>BizTalkComponents.PipelineComponents.SetPropertyFromXPath</id>
+    <version>$version$</version>
+    <authors>Jörgen Bergström</authors>
+    <projectUrl>https://github.com/BizTalkComponents/SetPropertyFromXPath</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Promotes a value specified by an XPath expression to a specified property.</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>BizTalk</tags>
+  </metadata>
+</package>

@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{198A6696-9BD6-40C8-A51C-B3B1AE11D827}"
+	ProjectSection(SolutionItems) = preProject
+		Build\Build.proj = Build\Build.proj
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{FC26E997-F153-408E-8950-22298012CDF4}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BizTalkComponents.PipelineComponents.SetPropertyFromXPath", "Src\SetPropertyFromXPath\BizTalkComponents.PipelineComponents.SetPropertyFromXPath.csproj", "{044C2159-82E6-43AF-8D87-3538DF1AF758}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BizTalkComponents.PipelineComponents.SetPropertyFromXPath.Tests.UnitTests", "Tests\UnitTests\BizTalkComponents.PipelineComponents.SetPropertyFromXPath.Tests.UnitTests.csproj", "{56D2E857-1398-48E0-A640-1ABC8DD2E689}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{044C2159-82E6-43AF-8D87-3538DF1AF758}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{044C2159-82E6-43AF-8D87-3538DF1AF758}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{044C2159-82E6-43AF-8D87-3538DF1AF758}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{044C2159-82E6-43AF-8D87-3538DF1AF758}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56D2E857-1398-48E0-A640-1ABC8DD2E689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56D2E857-1398-48E0-A640-1ABC8DD2E689}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56D2E857-1398-48E0-A640-1ABC8DD2E689}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56D2E857-1398-48E0-A640-1ABC8DD2E689}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
