@@ -100,10 +100,10 @@ namespace BizTalkComponents.PipelineComponents.SetPropertyFromXPath
 
         public void Load(IPropertyBag propertyBag, int errorLog)
         {
-            PropertyPath = PropertyBagHelper.ReadPropertyBag<string>(propertyBag, PropertyPathPropertyName);
-            XPath = PropertyBagHelper.ReadPropertyBag<string>(propertyBag, XPathPropertyName);
-            PromoteProperty = PropertyBagHelper.ReadPropertyBag<bool>(propertyBag, PromoteProperytName);
-            ThrowIfNoMatch = PropertyBagHelper.ReadPropertyBag<bool>(propertyBag, ThrowIfNoMatchPropertyName);
+            PropertyPath = PropertyBagHelper.ReadPropertyBag(propertyBag, PropertyPathPropertyName, PropertyPath);
+            XPath = PropertyBagHelper.ReadPropertyBag(propertyBag, XPathPropertyName, XPath);
+            PromoteProperty = PropertyBagHelper.ReadPropertyBag(propertyBag, PromoteProperytName, PromoteProperty);
+            ThrowIfNoMatch = PropertyBagHelper.ReadPropertyBag(propertyBag, ThrowIfNoMatchPropertyName, ThrowIfNoMatch);
         }
 
         public void Save(IPropertyBag propertyBag, bool clearDirty, bool saveAllProperties)
