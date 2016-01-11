@@ -71,8 +71,15 @@ namespace BizTalkComponents.PipelineComponents.SetPropertyFromXPath
             {
                 if (xPathReader.Match(0))
                 {
-                    value = xPathReader.ReadString();
-
+                    if (xPathReader.NodeType == XmlNodeType.Attribute)
+                    {
+                        value = xPathReader.GetAttribute(xPathReader.Name);
+                    }
+                    else
+                    {
+                        value = xPathReader.ReadString();
+                    }
+                    
                     if (PromoteProperty)
                     {
                         pInMsg.Context.Promote(new ContextProperty(PropertyPath), value);
