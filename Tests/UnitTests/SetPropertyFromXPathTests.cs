@@ -101,5 +101,29 @@ namespace BizTalkComponents.PipelineComponents.SetPropertyFromXPath.Tests.UnitTe
 
             var output = pipeline.Execute(message);
         }
+
+        [TestMethod]
+        public void TestSetPropertyFromXpathAttributePromote()
+        {
+            var pipeline = PipelineFactory.CreateEmptyReceivePipeline();
+            var component = new SetPropertyFromXPath
+            {
+                PropertyPath = "http://tempuri.org#MyProp",
+                XPath = "/root/test/@testAttribute",
+                PromoteProperty = true
+            };
+
+            pipeline.AddComponent(component, PipelineStage.Decode);
+
+            var message = MessageHelper.Create("<root><test testAttribute='testAttributeValue'>TestValue</test></root>");
+
+            Assert.IsNull(message.Context.Read("MyProp", "http://tempuri.org"));
+
+            var output = pipeline.Execute(message);
+
+            Assert.AreEqual(1, output.Count);
+            Assert.AreNotEqual(output[0].Context.Read("MyProp", "http://tempuri.org"), string.Empty);
+            Assert.IsTrue(output[0].Context.IsPromoted("MyProp", "http://tempuri.org"));
+        }
     }
 }
